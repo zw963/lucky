@@ -40,7 +40,7 @@ module Lucky::ServerSettings
     if File.exists?(YAML_SETTINGS_PATH)
       File.read YAML_SETTINGS_PATH
     else
-      abort <<-ERROR
+      abort <<-ERROR, status: 0
         Expected config file for the watcher at #{YAML_SETTINGS_PATH}.
 
         Try this...
